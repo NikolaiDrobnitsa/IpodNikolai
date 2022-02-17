@@ -91,11 +91,6 @@ namespace Ipod
             this.list_music.Location = new Point(250, 460);
             this.Controls.Add(list_music);
 
-            this.lists.Size = new Size(200, 200);
-            this.lists.Location = new Point(50, 50);
-            this.lists.Text = numVal.ToString();
-            this.Controls.Add(lists);
-
             var flowPanel = new FlowLayoutPanel();
             flowPanel.FlowDirection = FlowDirection.LeftToRight;
             flowPanel.Margin = new Padding(10);
@@ -317,8 +312,6 @@ namespace Ipod
         PictureBox disk = new PictureBox();
         ListBox list_music = new ListBox();
         Label amount = new Label();
-        Label lists = new Label();
-        //OpenFileDialog openFileDialog1 = new OpenFileDialog();
         List<string> PathToFile = new List<string>();
         int count = 1;
         bool check = true;
