@@ -109,9 +109,15 @@ namespace Ipod
 
         private void Delte_button_Click(object sender, EventArgs e)
         {
-            int indx = list_music.SelectedIndex;
             
-            if (indx == num) 
+            int indx = list_music.SelectedIndex;
+            if(PathToFile.Count == 0)
+            {
+                MessageBox.Show("Добавьте хотя бы одну песню для удаления!");
+            }
+            else
+            {
+            if (indx == num || indx == -1) 
             {
                 MessageBox.Show("Поставтьте на паузу или выберите другой трек для удалениее этого!");
             }
@@ -120,6 +126,7 @@ namespace Ipod
                 list_music.Items.RemoveAt(list_music.SelectedIndex);
                 PathToFile.Remove(PathToFile[indx]);
 
+            }
             }
             
         }
